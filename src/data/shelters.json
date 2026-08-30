@@ -1,0 +1,42 @@
+[
+  {
+    "shelter_id": "S001",
+    "name": "Emergency Relief Centre A",
+    "x": 4.0,
+    "y": 8.0,
+    "capacity": 2500,
+    "type": "RELIEF_CENTRE"
+  },
+  {
+    "shelter_id": "S002",
+    "name": "Emergency Relief Centre B",
+    "x": 9.0,
+    "y": -8.0,
+    "capacity": 3000,
+    "type": "RELIEF_CENTRE"
+  },
+  {
+    "shelter_id": "S003",
+    "name": "Emergency Relief Centre C",
+    "x": 12.0,
+    "y": 2.0,
+    "capacity": 2000,
+    "type": "RELIEF_CENTRE"
+  },
+  {
+    "shelter_id": "S004",
+    "name": "Emergency Relief Centre D",
+    "x": 16.0,
+    "y": 5.0,
+    "capacity": 3500,
+    "type": "RELIEF_CENTRE"
+  },
+  {
+    "shelter_id": "S005",
+    "name": "Emergency Relief Centre E",
+    "x": 19.0,
+    "y": -4.0,
+    "capacity": 2500,
+    "type": "RELIEF_CENTRE"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "team_id": "POL001",
+    "name": "Local Police Station",
+    "type": "POLICE",
+    "location": {
+      "x": 2.0,
+      "y": -2.0
+    },
+    "contact": "+91XXXXXXXX01"
+  },
+  {
+    "team_id": "POL002",
+    "name": "District Police Control Room",
+    "type": "POLICE",
+    "location": {
+      "x": 5.0,
+      "y": -3.0
+    },
+    "contact": "+91XXXXXXXX02"
+  },
+  {
+    "team_id": "FIR001",
+    "name": "Fire & Rescue Station",
+    "type": "FIRE",
+    "location": {
+      "x": 7.0,
+      "y": 1.0
+    },
+    "contact": "+91XXXXXXXX03"
+  },
+  {
+    "team_id": "FIR002",
+    "name": "Emergency Rescue Unit",
+    "type": "FIRE",
+    "location": {
+      "x": 10.0,
+      "y": -5.0
+    },
+    "contact": "+91XXXXXXXX04"
+  },
+  {
+    "team_id": "MED001",
+    "name": "Primary Health Centre",
+    "type": "MEDICAL",
+    "location": {
+      "x": 3.0,
+      "y": 3.0
+    },
+    "contact": "+91XXXXXXXX05"
+  },
+  {
+    "team_id": "MED002",
+    "name": "District Hospital",
+    "type": "MEDICAL",
+    "location": {
+      "x": 14.0,
+      "y": 1.0
+    },
+    "contact": "+91XXXXXXXX06"
+  },
+  {
+    "team_id": "DMF001",
+    "name": "District Disaster Management Cell",
+    "type": "RELIEF",
+    "location": {
+      "x": 12.0,
+      "y": -2.0
+    },
+    "contact": "+91XXXXXXXX07"
+  },
+  {
+    "team_id": "DMF002",
+    "name": "NDRF/Relief Response Team",
+    "type": "RELIEF",
+    "location": {
+      "x": 15.0,
+      "y": 4.0
+    },
+    "contact": "+91XXXXXXXX08"
+  }
+]

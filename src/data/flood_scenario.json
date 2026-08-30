@@ -1,0 +1,26 @@
+{
+  "branches": [
+    {
+      "name": "North Branch",
+      "path": [
+        {"x": 0.0, "y": 0.0, "time_seconds": 0},
+        {"x": 2.2, "y": 1.4, "time_seconds": 160},
+        {"x": 6.1, "y": 3.7, "time_seconds": 350},
+        {"x": 10.2, "y": 2.6, "time_seconds": 550},
+        {"x": 13.5, "y": 5.8, "time_seconds": 770},
+        {"x": 17.0, "y": 7.2, "time_seconds": 980}
+      ]
+    },
+    {
+      "name": "South Branch",
+      "path": [
+        {"x": 0.0, "y": 0.0, "time_seconds": 0},
+        {"x": 4.8, "y": -1.2, "time_seconds": 260},
+        {"x": 8.4, "y": -4.1, "time_seconds": 460},
+        {"x": 11.8, "y": -6.2, "time_seconds": 680},
+        {"x": 15.1, "y": -2.8, "time_seconds": 870},
+        {"x": 18.4, "y": -7.5, "time_seconds": 1080}
+      ]
+    }
+  ]
+}

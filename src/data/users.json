@@ -1,0 +1,1111 @@
+[
+  {
+    "user_id": "U001",
+    "name": "Rajesh Kumar",
+    "village_id": "V001",
+    "phone": "+91XXXXXXXX01",
+    "fcm_token": null,
+    "exact_address": "House No. 78, River View",
+    "family_members": []
+  },
+  {
+    "user_id": "U002",
+    "name": "Priya Sharma",
+    "village_id": "V001",
+    "phone": "+91XXXXXXXX02",
+    "fcm_token": null,
+    "exact_address": "House No. 14, Market Lane",
+    "family_members": [
+      {
+        "name": "Ishaan Sharma",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 62
+      }
+    ]
+  },
+  {
+    "user_id": "U003",
+    "name": "Amit Patel",
+    "village_id": "V001",
+    "phone": "+91XXXXXXXX03",
+    "fcm_token": null,
+    "exact_address": "House No. 260, Market Lane",
+    "family_members": [
+      {
+        "name": "Siddharth Patel",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 80
+      },
+      {
+        "name": "Ansh Patel",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 20
+      },
+      {
+        "name": "Dhruv Patel",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 55
+      }
+    ]
+  },
+  {
+    "user_id": "U004",
+    "name": "Sunita Devi",
+    "village_id": "V001",
+    "phone": "+91XXXXXXXX04",
+    "fcm_token": null,
+    "exact_address": "House No. 78, School Road",
+    "family_members": [
+      {
+        "name": "Sita Devi",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 14
+      },
+      {
+        "name": "Rita Devi",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 58
+      },
+      {
+        "name": "Krishna Devi",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 30
+      }
+    ]
+  },
+  {
+    "user_id": "U005",
+    "name": "Vijay Singh",
+    "village_id": "V001",
+    "phone": "+91XXXXXXXX05",
+    "fcm_token": null,
+    "exact_address": "House No. 88, Main Street",
+    "family_members": [
+      {
+        "name": "Riya Singh",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 71
+      },
+      {
+        "name": "Neha Singh",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 4
+      },
+      {
+        "name": "Siddharth Singh",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 17
+      },
+      {
+        "name": "Shaurya Singh",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 26
+      }
+    ]
+  },
+  {
+    "user_id": "U006",
+    "name": "Anil Verma",
+    "village_id": "V002",
+    "phone": "+91XXXXXXXX06",
+    "fcm_token": null,
+    "exact_address": "House No. 64, Main Street",
+    "family_members": [
+      {
+        "name": "Dhruv Verma",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 18
+      },
+      {
+        "name": "Siddharth Verma",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 17
+      }
+    ]
+  },
+  {
+    "user_id": "U007",
+    "name": "Kiran Rao",
+    "village_id": "V002",
+    "phone": "+91XXXXXXXX07",
+    "fcm_token": null,
+    "exact_address": "House No. 289, Station Road",
+    "family_members": [
+      {
+        "name": "Ananya Rao",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 39
+      },
+      {
+        "name": "Sneha Rao",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 11
+      }
+    ]
+  },
+  {
+    "user_id": "U008",
+    "name": "Sanjay Joshi",
+    "village_id": "V002",
+    "phone": "+91XXXXXXXX08",
+    "fcm_token": null,
+    "exact_address": "House No. 197, Station Road",
+    "family_members": [
+      {
+        "name": "Sneha Joshi",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 40
+      },
+      {
+        "name": "Ansh Joshi",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 8
+      },
+      {
+        "name": "Sita Joshi",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 14
+      }
+    ]
+  },
+  {
+    "user_id": "U009",
+    "name": "Meena Kumari",
+    "village_id": "V002",
+    "phone": "+91XXXXXXXX09",
+    "fcm_token": null,
+    "exact_address": "House No. 168, River View",
+    "family_members": [
+      {
+        "name": "Avni Kumari",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 29
+      }
+    ]
+  },
+  {
+    "user_id": "U010",
+    "name": "Ramesh Chandra",
+    "village_id": "V002",
+    "phone": "+91XXXXXXXX10",
+    "fcm_token": null,
+    "exact_address": "House No. 103, Station Road",
+    "family_members": [
+      {
+        "name": "Anjali Chandra",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 11
+      },
+      {
+        "name": "Dhruv Chandra",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 33
+      },
+      {
+        "name": "Krishna Chandra",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 60
+      },
+      {
+        "name": "Riya Chandra",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 16
+      }
+    ]
+  },
+  {
+    "user_id": "U011",
+    "name": "Deepak Gupta",
+    "village_id": "V003",
+    "phone": "+91XXXXXXXX11",
+    "fcm_token": null,
+    "exact_address": "House No. 146, Temple Road",
+    "family_members": [
+      {
+        "name": "Mohan Gupta",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 8
+      },
+      {
+        "name": "Aarav Gupta",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 55
+      }
+    ]
+  },
+  {
+    "user_id": "U012",
+    "name": "Neelam Mishra",
+    "village_id": "V003",
+    "phone": "+91XXXXXXXX12",
+    "fcm_token": null,
+    "exact_address": "House No. 287, Main Street",
+    "family_members": []
+  },
+  {
+    "user_id": "U013",
+    "name": "Ravi Yadav",
+    "village_id": "V003",
+    "phone": "+91XXXXXXXX13",
+    "fcm_token": null,
+    "exact_address": "House No. 188, Market Lane",
+    "family_members": [
+      {
+        "name": "Anjali Yadav",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 7
+      },
+      {
+        "name": "Siddharth Yadav",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 52
+      },
+      {
+        "name": "Krishna Yadav",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 58
+      },
+      {
+        "name": "Kabir Yadav",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 30
+      }
+    ]
+  },
+  {
+    "user_id": "U014",
+    "name": "Pooja Reddy",
+    "village_id": "V003",
+    "phone": "+91XXXXXXXX14",
+    "fcm_token": null,
+    "exact_address": "House No. 240, Temple Road",
+    "family_members": [
+      {
+        "name": "Aadya Reddy",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 12
+      }
+    ]
+  },
+  {
+    "user_id": "U015",
+    "name": "Vikram Rathore",
+    "village_id": "V003",
+    "phone": "+91XXXXXXXX15",
+    "fcm_token": null,
+    "exact_address": "House No. 129, River View",
+    "family_members": []
+  },
+  {
+    "user_id": "U016",
+    "name": "Sandeep Nair",
+    "village_id": "V004",
+    "phone": "+91XXXXXXXX16",
+    "fcm_token": null,
+    "exact_address": "House No. 210, School Road",
+    "family_members": []
+  },
+  {
+    "user_id": "U017",
+    "name": "Jyoti Deshmukh",
+    "village_id": "V004",
+    "phone": "+91XXXXXXXX17",
+    "fcm_token": null,
+    "exact_address": "House No. 276, Main Street",
+    "family_members": [
+      {
+        "name": "Avni Deshmukh",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 30
+      },
+      {
+        "name": "Rita Deshmukh",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 83
+      },
+      {
+        "name": "Diya Deshmukh",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 8
+      }
+    ]
+  },
+  {
+    "user_id": "U018",
+    "name": "Manoj Kumar",
+    "village_id": "V004",
+    "phone": "+91XXXXXXXX18",
+    "fcm_token": null,
+    "exact_address": "House No. 184, Main Street",
+    "family_members": [
+      {
+        "name": "Rahul Kumar",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 19
+      },
+      {
+        "name": "Anjali Kumar",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 55
+      },
+      {
+        "name": "Rudra Kumar",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 68
+      }
+    ]
+  },
+  {
+    "user_id": "U019",
+    "name": "Rekha Patil",
+    "village_id": "V004",
+    "phone": "+91XXXXXXXX19",
+    "fcm_token": null,
+    "exact_address": "House No. 26, Market Lane",
+    "family_members": [
+      {
+        "name": "Neha Patil",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 22
+      }
+    ]
+  },
+  {
+    "user_id": "U020",
+    "name": "Arjun Choudhury",
+    "village_id": "V004",
+    "phone": "+91XXXXXXXX20",
+    "fcm_token": null,
+    "exact_address": "House No. 227, Main Street",
+    "family_members": [
+      {
+        "name": "Sita Choudhury",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 22
+      }
+    ]
+  },
+  {
+    "user_id": "U021",
+    "name": "Alok Ranjan",
+    "village_id": "V005",
+    "phone": "+91XXXXXXXX21",
+    "fcm_token": null,
+    "exact_address": "House No. 61, Temple Road",
+    "family_members": [
+      {
+        "name": "Kavya Ranjan",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 19
+      }
+    ]
+  },
+  {
+    "user_id": "U022",
+    "name": "Sushma Swaraj",
+    "village_id": "V005",
+    "phone": "+91XXXXXXXX22",
+    "fcm_token": null,
+    "exact_address": "House No. 267, Station Road",
+    "family_members": [
+      {
+        "name": "Vihaan Swaraj",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 8
+      },
+      {
+        "name": "Shaurya Swaraj",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 45
+      },
+      {
+        "name": "Kavya Swaraj",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 67
+      },
+      {
+        "name": "Rudra Swaraj",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 7
+      }
+    ]
+  },
+  {
+    "user_id": "U023",
+    "name": "Harish Rawat",
+    "village_id": "V005",
+    "phone": "+91XXXXXXXX23",
+    "fcm_token": null,
+    "exact_address": "House No. 14, Market Lane",
+    "family_members": [
+      {
+        "name": "Aarav Rawat",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 25
+      },
+      {
+        "name": "Meera Rawat",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 2
+      },
+      {
+        "name": "Neha Rawat",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 74
+      },
+      {
+        "name": "Aadya Rawat",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 30
+      }
+    ]
+  },
+  {
+    "user_id": "U024",
+    "name": "Mamta Banerjee",
+    "village_id": "V005",
+    "phone": "+91XXXXXXXX24",
+    "fcm_token": null,
+    "exact_address": "House No. 61, Station Road",
+    "family_members": [
+      {
+        "name": "Rahul Banerjee",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 15
+      }
+    ]
+  },
+  {
+    "user_id": "U025",
+    "name": "Nitin Gadkari",
+    "village_id": "V005",
+    "phone": "+91XXXXXXXX25",
+    "fcm_token": null,
+    "exact_address": "House No. 242, Station Road",
+    "family_members": []
+  },
+  {
+    "user_id": "U026",
+    "name": "Pranab Mukherjee",
+    "village_id": "V006",
+    "phone": "+91XXXXXXXX26",
+    "fcm_token": null,
+    "exact_address": "House No. 230, School Road",
+    "family_members": [
+      {
+        "name": "Krishna Mukherjee",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 13
+      },
+      {
+        "name": "Shaurya Mukherjee",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 3
+      },
+      {
+        "name": "Meera Mukherjee",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 36
+      },
+      {
+        "name": "Ansh Mukherjee",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 52
+      }
+    ]
+  },
+  {
+    "user_id": "U027",
+    "name": "Vasundhara Raje",
+    "village_id": "V006",
+    "phone": "+91XXXXXXXX27",
+    "fcm_token": null,
+    "exact_address": "House No. 28, Main Street",
+    "family_members": [
+      {
+        "name": "Raj Raje",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 20
+      }
+    ]
+  },
+  {
+    "user_id": "U028",
+    "name": "Akhilesh Yadav",
+    "village_id": "V006",
+    "phone": "+91XXXXXXXX28",
+    "fcm_token": null,
+    "exact_address": "House No. 28, Temple Road",
+    "family_members": [
+      {
+        "name": "Riya Yadav",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 21
+      },
+      {
+        "name": "Rahul Yadav",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 32
+      },
+      {
+        "name": "Mohan Yadav",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 31
+      }
+    ]
+  },
+  {
+    "user_id": "U029",
+    "name": "Mayawati Kumari",
+    "village_id": "V006",
+    "phone": "+91XXXXXXXX29",
+    "fcm_token": null,
+    "exact_address": "House No. 226, Station Road",
+    "family_members": [
+      {
+        "name": "Shaurya Kumari",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 84
+      },
+      {
+        "name": "Aarav Kumari",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 13
+      }
+    ]
+  },
+  {
+    "user_id": "U030",
+    "name": "Mulayam Singh",
+    "village_id": "V006",
+    "phone": "+91XXXXXXXX30",
+    "fcm_token": null,
+    "exact_address": "House No. 19, Station Road",
+    "family_members": []
+  },
+  {
+    "user_id": "U031",
+    "name": "Bhupendra Patel",
+    "village_id": "V007",
+    "phone": "+91XXXXXXXX31",
+    "fcm_token": null,
+    "exact_address": "House No. 138, Temple Road",
+    "family_members": [
+      {
+        "name": "Rita Patel",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 18
+      },
+      {
+        "name": "Anjali Patel",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 40
+      },
+      {
+        "name": "Riya Patel",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 67
+      },
+      {
+        "name": "Meera Patel",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 30
+      }
+    ]
+  },
+  {
+    "user_id": "U032",
+    "name": "Anandiben Patel",
+    "village_id": "V007",
+    "phone": "+91XXXXXXXX32",
+    "fcm_token": null,
+    "exact_address": "House No. 53, Market Lane",
+    "family_members": [
+      {
+        "name": "Aadya Patel",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 14
+      },
+      {
+        "name": "Vihaan Patel",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 45
+      }
+    ]
+  },
+  {
+    "user_id": "U033",
+    "name": "Vijay Rupani",
+    "village_id": "V007",
+    "phone": "+91XXXXXXXX33",
+    "fcm_token": null,
+    "exact_address": "House No. 102, Main Street",
+    "family_members": []
+  },
+  {
+    "user_id": "U034",
+    "name": "Keshubhai Patel",
+    "village_id": "V007",
+    "phone": "+91XXXXXXXX34",
+    "fcm_token": null,
+    "exact_address": "House No. 298, School Road",
+    "family_members": [
+      {
+        "name": "Aditya Patel",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 32
+      },
+      {
+        "name": "Siddharth Patel",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 52
+      }
+    ]
+  },
+  {
+    "user_id": "U035",
+    "name": "Suresh Mehta",
+    "village_id": "V007",
+    "phone": "+91XXXXXXXX35",
+    "fcm_token": null,
+    "exact_address": "House No. 103, Temple Road",
+    "family_members": [
+      {
+        "name": "Pooja Mehta",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 28
+      },
+      {
+        "name": "Ananya Mehta",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 50
+      },
+      {
+        "name": "Dhruv Mehta",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 2
+      }
+    ]
+  },
+  {
+    "user_id": "U036",
+    "name": "Manohar Joshi",
+    "village_id": "V008",
+    "phone": "+91XXXXXXXX36",
+    "fcm_token": null,
+    "exact_address": "House No. 226, Main Street",
+    "family_members": [
+      {
+        "name": "Rudra Joshi",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 15
+      }
+    ]
+  },
+  {
+    "user_id": "U037",
+    "name": "Narayan Rane",
+    "village_id": "V008",
+    "phone": "+91XXXXXXXX37",
+    "fcm_token": null,
+    "exact_address": "House No. 288, Main Street",
+    "family_members": [
+      {
+        "name": "Ansh Rane",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 84
+      },
+      {
+        "name": "Pooja Rane",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 4
+      }
+    ]
+  },
+  {
+    "user_id": "U038",
+    "name": "Vilasrao Deshmukh",
+    "village_id": "V008",
+    "phone": "+91XXXXXXXX38",
+    "fcm_token": null,
+    "exact_address": "House No. 66, Main Street",
+    "family_members": [
+      {
+        "name": "Kavya Deshmukh",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 53
+      },
+      {
+        "name": "Rahul Deshmukh",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 14
+      },
+      {
+        "name": "Rudra Deshmukh",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 24
+      },
+      {
+        "name": "Diya Deshmukh",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 17
+      }
+    ]
+  },
+  {
+    "user_id": "U039",
+    "name": "Sushilkumar Shinde",
+    "village_id": "V008",
+    "phone": "+91XXXXXXXX39",
+    "fcm_token": null,
+    "exact_address": "House No. 33, Main Street",
+    "family_members": [
+      {
+        "name": "Aarav Shinde",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 51
+      },
+      {
+        "name": "Raj Shinde",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 10
+      },
+      {
+        "name": "Meera Shinde",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 3
+      },
+      {
+        "name": "Rita Shinde",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 31
+      }
+    ]
+  },
+  {
+    "user_id": "U040",
+    "name": "Ashok Chavan",
+    "village_id": "V008",
+    "phone": "+91XXXXXXXX40",
+    "fcm_token": null,
+    "exact_address": "House No. 268, Temple Road",
+    "family_members": [
+      {
+        "name": "Aditya Chavan",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 12
+      }
+    ]
+  },
+  {
+    "user_id": "U041",
+    "name": "Devendra Fadnavis",
+    "village_id": "V009",
+    "phone": "+91XXXXXXXX41",
+    "fcm_token": null,
+    "exact_address": "House No. 222, Station Road",
+    "family_members": [
+      {
+        "name": "Pooja Fadnavis",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 60
+      },
+      {
+        "name": "Ishita Fadnavis",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 21
+      },
+      {
+        "name": "Kabir Fadnavis",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 45
+      }
+    ]
+  },
+  {
+    "user_id": "U042",
+    "name": "Uddhav Thackeray",
+    "village_id": "V009",
+    "phone": "+91XXXXXXXX42",
+    "fcm_token": null,
+    "exact_address": "House No. 203, School Road",
+    "family_members": [
+      {
+        "name": "Diya Thackeray",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 15
+      }
+    ]
+  },
+  {
+    "user_id": "U043",
+    "name": "Eknath Shinde",
+    "village_id": "V009",
+    "phone": "+91XXXXXXXX43",
+    "fcm_token": null,
+    "exact_address": "House No. 201, River View",
+    "family_members": [
+      {
+        "name": "Sneha Shinde",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 19
+      },
+      {
+        "name": "Raj Shinde",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 3
+      }
+    ]
+  },
+  {
+    "user_id": "U044",
+    "name": "Ajit Pawar",
+    "village_id": "V009",
+    "phone": "+91XXXXXXXX44",
+    "fcm_token": null,
+    "exact_address": "House No. 60, Temple Road",
+    "family_members": [
+      {
+        "name": "Ananya Pawar",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 11
+      },
+      {
+        "name": "Kabir Pawar",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 7
+      },
+      {
+        "name": "Mohan Pawar",
+        "relation": "Parent",
+        "gender": "Male",
+        "age": 57
+      }
+    ]
+  },
+  {
+    "user_id": "U045",
+    "name": "Sharad Pawar",
+    "village_id": "V009",
+    "phone": "+91XXXXXXXX45",
+    "fcm_token": null,
+    "exact_address": "House No. 163, Station Road",
+    "family_members": [
+      {
+        "name": "Mohan Pawar",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 4
+      }
+    ]
+  },
+  {
+    "user_id": "U046",
+    "name": "Siddaramaiah Gowda",
+    "village_id": "V010",
+    "phone": "+91XXXXXXXX46",
+    "fcm_token": null,
+    "exact_address": "House No. 132, River View",
+    "family_members": [
+      {
+        "name": "Kavya Gowda",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 84
+      },
+      {
+        "name": "Shaurya Gowda",
+        "relation": "Spouse",
+        "gender": "Male",
+        "age": 36
+      },
+      {
+        "name": "Pooja Gowda",
+        "relation": "Child",
+        "gender": "Female",
+        "age": 16
+      },
+      {
+        "name": "Aarav Gowda",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 25
+      }
+    ]
+  },
+  {
+    "user_id": "U047",
+    "name": "B. S. Yediyurappa",
+    "village_id": "V010",
+    "phone": "+91XXXXXXXX47",
+    "fcm_token": null,
+    "exact_address": "House No. 8, River View",
+    "family_members": []
+  },
+  {
+    "user_id": "U048",
+    "name": "H. D. Kumaraswamy",
+    "village_id": "V010",
+    "phone": "+91XXXXXXXX48",
+    "fcm_token": null,
+    "exact_address": "House No. 146, Station Road",
+    "family_members": [
+      {
+        "name": "Dhruv Kumaraswamy",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 16
+      },
+      {
+        "name": "Siddharth Kumaraswamy",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 16
+      },
+      {
+        "name": "Dhruv Kumaraswamy",
+        "relation": "Sibling",
+        "gender": "Male",
+        "age": 45
+      },
+      {
+        "name": "Ananya Kumaraswamy",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 50
+      }
+    ]
+  },
+  {
+    "user_id": "U049",
+    "name": "D. V. Sadananda Gowda",
+    "village_id": "V010",
+    "phone": "+91XXXXXXXX49",
+    "fcm_token": null,
+    "exact_address": "House No. 224, River View",
+    "family_members": []
+  },
+  {
+    "user_id": "U050",
+    "name": "Jagadish Shettar",
+    "village_id": "V010",
+    "phone": "+91XXXXXXXX50",
+    "fcm_token": null,
+    "exact_address": "House No. 127, School Road",
+    "family_members": [
+      {
+        "name": "Anjali Shettar",
+        "relation": "Parent",
+        "gender": "Female",
+        "age": 75
+      },
+      {
+        "name": "Rita Shettar",
+        "relation": "Sibling",
+        "gender": "Female",
+        "age": 37
+      },
+      {
+        "name": "Aarav Shettar",
+        "relation": "Child",
+        "gender": "Male",
+        "age": 19
+      },
+      {
+        "name": "Sita Shettar",
+        "relation": "Spouse",
+        "gender": "Female",
+        "age": 39
+      }
+    ]
+  }
+]
