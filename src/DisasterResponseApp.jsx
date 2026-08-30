@@ -7,6 +7,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { PushNotifications } from "@capacitor/push-notifications";
 import {
   AlertTriangle, Bell, Home, BookOpen, MapPin, User, Phone, ChevronRight,
   ChevronLeft, X, CheckCircle2, Shield, ShieldAlert, Flame, Droplets, Wind,
@@ -31,7 +32,7 @@ import {
 
 const MOCK_VILLAGES = [
   { id: "V1", name: "Riverside Village", region: "Lower Basin District", population: 2400, primaryRisk: "Flood / Dam Break" },
-  { id: "V2", name: "Hillside Village", region: "Northern Ridge District", population: 1800, primaryRisk: "Landslide" },
+  { id: "V2", name: "Shivgaon", region: "Lower Basin District", population: 860, primaryRisk: "Flood / Dam Break", distanceFromDamKm: 4.948, arrivalTimeSeconds: 600, nearestShelter: "Emergency Relief Centre B" },
   { id: "V3", name: "Lakeview Village", region: "Lower Basin District", population: 3100, primaryRisk: "Flood" },
 ];
 
@@ -42,18 +43,24 @@ const MOCK_USERS = [
   { id: "U4", name: "Sanjay Deshmukh", phone: "+91 98xxx xx004", villageId: "V2", householdSize: 5, notifyEmergency: true, notifyCritical: false, notifyShelter: true },
   { id: "U5", name: "Priya Nair", phone: "+91 98xxx xx005", villageId: "V3", householdSize: 4, notifyEmergency: true, notifyCritical: true, notifyShelter: true },
   { id: "U6", name: "Arjun Singh", phone: "+91 98xxx xx006", villageId: "V3", householdSize: 1, notifyEmergency: true, notifyCritical: true, notifyShelter: true },
+  { id: "U51", name: "Debajeet Mandal", phone: "9436319931", villageId: "V2", householdSize: 2, familyMembers: [{ name: "Abronile Sarkar", relation: "Friend" }], notifyEmergency: true, notifyCritical: true, notifyShelter: true },
+  { id: "U52", name: "Abronile Sarkar", phone: "7758959913", villageId: "V2", householdSize: 2, familyMembers: [{ name: "Abhinav Ingole", relation: "Friend" }], notifyEmergency: true, notifyCritical: true, notifyShelter: true },
+  { id: "U53", name: "Abhinav Ingole", phone: "9673352574", villageId: "V2", householdSize: 2, familyMembers: [{ name: "Janhvi Maojkar", relation: "Friend" }], notifyEmergency: true, notifyCritical: true, notifyShelter: true },
+  { id: "U54", name: "Janhvi Maojkar", phone: "7219825405", villageId: "V2", householdSize: 2, familyMembers: [{ name: "Rupali", relation: "Friend" }], notifyEmergency: true, notifyCritical: true, notifyShelter: true },
+  { id: "U55", name: "Rupali", phone: "7768884213", villageId: "V2", householdSize: 2, familyMembers: [{ name: "Piyush Patil", relation: "Friend" }], notifyEmergency: true, notifyCritical: true, notifyShelter: true },
+  { id: "U56", name: "Piyush Patil", phone: "7020192835", villageId: "V2", householdSize: 2, familyMembers: [{ name: "Debajeet Mandal", relation: "Friend" }], notifyEmergency: true, notifyCritical: true, notifyShelter: true },
 ];
 
 const MOCK_SHELTERS = [
   { id: "S1", name: "Riverside Community Hall", villageId: "V1", capacity: 500, occupancy: 0, status: "Available", address: "Main Road, Riverside Village", contactPhone: "+91 20xxxx0101", lat: 18.63, lng: 73.86 },
-  { id: "S2", name: "Riverside High School", villageId: "V1", capacity: 800, occupancy: 120, status: "Available", address: "School Lane, Riverside Village", contactPhone: "+91 20xxxx0102", lat: 18.635, lng: 73.855 },
+  { id: "S2", name: "Emergency Relief Centre B", villageId: "V2", capacity: 3000, occupancy: 0, status: "Available", address: "Relief Road, Shivgaon", contactPhone: "+91 20xxxx0102", lat: 18.58, lng: 74.35 },
   { id: "S3", name: "Hillside Government School", villageId: "V2", capacity: 300, occupancy: 40, status: "Available", address: "Ridge Road, Hillside Village", contactPhone: "+91 20xxxx0103", lat: 18.70, lng: 73.80 },
   { id: "S4", name: "Lakeview Town Hall", villageId: "V3", capacity: 600, occupancy: 210, status: "Available", address: "Lake Road, Lakeview Village", contactPhone: "+91 20xxxx0104", lat: 18.58, lng: 73.90 },
   { id: "S5", name: "Lakeview Sports Complex", villageId: "V3", capacity: 1000, occupancy: 950, status: "Near Capacity", address: "Stadium Street, Lakeview Village", contactPhone: "+91 20xxxx0105", lat: 18.585, lng: 73.905 },
 ];
 
 // The synthetic "logged in" user for this prototype (no real auth system).
-const CURRENT_USER_ID = "U1";
+const CURRENT_USER_ID = "U51";
 
 /* ---------------------------- DataService ---------------------------------
    Clean read layer. Screens call these functions and never touch the arrays
@@ -142,9 +149,60 @@ const ALERT_HISTORY = [
   { id: "H-3", type: "LANDSLIDE", severity: "WARNING", villageId: "V2", message: "Minor slope movement observed near Hillside Village after heavy rain.", status: "RESOLVED", timestamp: "2026-07-02T09:15:00Z", evacuationSteps: [] },
 ];
 
-function useAlertService() {
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000";
+
+function useAlertService(villageId, userId) {
   // In-memory demo state stands in for a live push/WebSocket feed.
   const [activePreset, setActivePreset] = useState("NONE");
+  const [liveAlert, setLiveAlert] = useState(null);
+
+  useEffect(() => {
+    const backendVillageId = villageId === "V2" ? "V002" : villageId;
+    if (!backendVillageId) return undefined;
+    const poll = async () => {
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/alerts/village/${backendVillageId}`);
+        if (!response.ok) return;
+        const data = await response.json();
+        setLiveAlert(data.active ? { ...data.alert, villageId, elapsedSeconds: data.elapsed_seconds, nearestRefugeCenter: "Emergency Relief Centre B" } : null);
+      } catch {
+        // Demo alerts remain available when the API is offline.
+      }
+    };
+    poll();
+    const timer = setInterval(poll, 2000);
+    return () => clearInterval(timer);
+  }, [villageId]);
+
+  useEffect(() => {
+    let removeRegistration;
+    let removeReceived;
+    const registerForPush = async () => {
+      try {
+        const permission = await PushNotifications.requestPermissions();
+        if (permission.receive !== "granted") return;
+        await PushNotifications.createChannel({ id: "rakshanet-alerts", name: "Emergency Alerts", importance: 5, sound: "default" });
+        removeRegistration = await PushNotifications.addListener("registration", async ({ value }) => {
+          await fetch(`${API_BASE_URL}/api/alerts/register-device`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ user_id: userId, village_id: villageId === "V2" ? "V002" : villageId, fcm_token: value }),
+          });
+        });
+        removeReceived = await PushNotifications.addListener("pushNotificationReceived", (notification) => {
+          setLiveAlert((current) => current || { severity: "CRITICAL", type: "DAM_BREAK", villageId, message: notification.body, status: "ACTIVE", evacuationSteps: [] });
+        });
+        await PushNotifications.register();
+      } catch {
+        // Push plugin is unavailable in browser builds; polling still works.
+      }
+    };
+    registerForPush();
+    return () => {
+      removeRegistration?.remove();
+      removeReceived?.remove();
+    };
+  }, [villageId, userId]);
 
   const activeAlert = useMemo(() => {
     const preset = ALERT_PRESETS[activePreset];
@@ -153,7 +211,7 @@ function useAlertService() {
   }, [activePreset]);
 
   return {
-    getActiveAlert: () => activeAlert, // null when all clear
+    getActiveAlert: () => liveAlert || activeAlert, // backend alert takes precedence
     getAlertHistory: () => ALERT_HISTORY,
     // Demo-only control. A real integration replaces this with a
     // subscription to the backend's push channel.
@@ -498,12 +556,25 @@ function HomeScreen({ user, village, activeAlert, onNavigate, onOpenAlert, onOpe
                   <span className="flex items-center gap-1 min-w-0"><MapPin size={12} className="shrink-0" />{DataService.getVillageById(activeAlert.villageId)?.name}</span>
                   <span className="flex items-center gap-1"><Clock size={12} className="shrink-0" />{timeAgo(activeAlert.timestamp)}</span>
                 </div>
+                {activeAlert.elapsedSeconds !== undefined && (
+                  <div className="mt-3 rounded-lg bg-red-50 p-3 text-xs text-red-800 space-y-1">
+                    <p><strong>Elapsed event time:</strong> {formatElapsed(activeAlert.elapsedSeconds)}</p>
+                    <p><strong>Nearest refuge:</strong> {activeAlert.nearestRefugeCenter || "Emergency Relief Centre B"}</p>
+                  </div>
+                )}
                 <div className="mt-3 flex items-center justify-between text-red-600 font-bold text-sm">
                   View Alert <ChevronRight size={16} />
                 </div>
               </div>
             </Card>
           </button>
+        )}
+
+        {hasAlert && (
+          <div className="grid grid-cols-2 gap-2">
+            <a href="tel:112" className="rounded-xl bg-red-600 px-3 py-3 text-center text-sm font-bold text-white">Call 112</a>
+            <a href="tel:108" className="rounded-xl border border-red-200 bg-white px-3 py-3 text-center text-sm font-bold text-red-700">Call Ambulance</a>
+          </div>
         )}
 
         {/* Quick Actions */}
@@ -649,6 +720,12 @@ function AlertDetailScreen({ alert, onBack, onNavigate, onOpenSOS }) {
             <p className="flex items-start gap-2 min-w-0"><MapPin size={14} className="shrink-0 mt-0.5" /> <span className="break-words">Affected Area: <span className="font-semibold">{village?.name}</span></span></p>
             <p className="flex items-start gap-2 min-w-0"><Clock size={14} className="shrink-0 mt-0.5" /> <span className="break-words">Time: <span className="font-semibold">{formatTimestamp(alert.timestamp)}</span></span></p>
           </div>
+          {alert.elapsedSeconds !== undefined && (
+            <div className="mt-4 rounded-xl bg-black/15 p-3 text-sm text-white">
+              <p>Elapsed event time: <span className="font-bold">{formatElapsed(alert.elapsedSeconds)}</span></p>
+              <p className="mt-1">Nearest refuge centre: <span className="font-bold">{alert.nearestRefugeCenter || "Emergency Relief Centre B"}</span></p>
+            </div>
+          )}
         </div>
       </div>
 
@@ -926,8 +1003,8 @@ function ShelterDetailScreen({ shelter, onBack, onNavigate }) {
 function ContactsScreen({ village }) {
   const contacts = [
     { label: "National Emergency Number", value: "112", icon: Siren },
-    { label: "Local Disaster Control Room", value: "+91 20xxxx9000", icon: PhoneCall },
-    { label: `${village?.name} Village Office`, value: "+91 20xxxx9010", icon: Building2 },
+    { label: "Local Disaster Control Room", value: "+912012349000", icon: PhoneCall },
+    { label: `${village?.name} Village Office`, value: "+912012349010", icon: Building2 },
     { label: "Ambulance", value: "108", icon: Phone },
   ];
   return (
@@ -937,7 +1014,8 @@ function ContactsScreen({ village }) {
         {contacts.map((c) => {
           const Icon = c.icon;
           return (
-            <Card key={c.label} className="p-4 flex items-center gap-3 min-w-0">
+            <a key={c.label} href={`tel:${c.value.replace(/\s/g, "")}`} className="block">
+              <Card className="p-4 flex items-center gap-3 min-w-0">
               <div className="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center shrink-0">
                 <Icon size={18} className="text-red-600" />
               </div>
@@ -945,10 +1023,11 @@ function ContactsScreen({ village }) {
                 <p className="text-sm font-semibold text-gray-900 break-words">{c.label}</p>
                 <p className="text-sm text-gray-500 break-words">{c.value}</p>
               </div>
-            </Card>
+              </Card>
+            </a>
           );
         })}
-        <p className="text-xs text-gray-400 text-center pt-2">This prototype does not place real calls.</p>
+        <p className="text-xs text-gray-400 text-center pt-2">Tap an authority to call directly.</p>
       </div>
     </div>
   );
@@ -1242,7 +1321,6 @@ export default function DisasterResponseApp() {
   const [nav, setNav] = useState({ screen: "home", param: null });
   const [sosStage, setSosStage] = useState(null); // null | 'confirm' | 'sent'
   const [demoOpen, setDemoOpen] = useState(false);
-  const alertService = useAlertService();
 
   useEffect(() => {
     return onAuthStateChanged(auth, async (firebaseUser) => {
@@ -1304,6 +1382,7 @@ export default function DisasterResponseApp() {
 
   const user = profile || { id: authUser.uid, name: authUser.displayName || "User", email: authUser.email || "", villageId: "V1", householdSize: 1, notifyEmergency: true, notifyCritical: true, notifyShelter: true };
   const village = DataService.getVillageById(user.villageId) || MOCK_VILLAGES[0];
+  const alertService = useAlertService(user.villageId, user.id);
   const activeAlert = alertService.getActiveAlert();
   const history = alertService.getAlertHistory();
 

@@ -1108,4 +1108,64 @@
       }
     ]
   }
+  ,{
+    "user_id": "U051",
+    "name": "Debajeet Mandal",
+    "village_id": "V002",
+    "phone": "9436319931",
+    "priority_phone": true,
+    "fcm_token": null,
+    "exact_address": "Shivgaon, Main Street",
+    "family_members": [{"name": "Abronile Sarkar", "relation": "Friend", "gender": "Unknown", "age": null}]
+  },
+  {
+    "user_id": "U052",
+    "name": "Abronile Sarkar",
+    "village_id": "V002",
+    "phone": "7758959913",
+    "priority_phone": true,
+    "fcm_token": null,
+    "exact_address": "Shivgaon, Main Street",
+    "family_members": [{"name": "Abhinav Ingole", "relation": "Friend", "gender": "Unknown", "age": null}]
+  },
+  {
+    "user_id": "U053",
+    "name": "Abhinav Ingole",
+    "village_id": "V002",
+    "phone": "9673352574",
+    "priority_phone": true,
+    "fcm_token": null,
+    "exact_address": "Shivgaon, Main Street",
+    "family_members": [{"name": "Janhvi Maojkar", "relation": "Friend", "gender": "Unknown", "age": null}]
+  },
+  {
+    "user_id": "U054",
+    "name": "Janhvi Maojkar",
+    "village_id": "V002",
+    "phone": "7219825405",
+    "priority_phone": true,
+    "fcm_token": null,
+    "exact_address": "Shivgaon, Main Street",
+    "family_members": [{"name": "Rupali", "relation": "Friend", "gender": "Unknown", "age": null}]
+  },
+  {
+    "user_id": "U055",
+    "name": "Rupali",
+    "village_id": "V002",
+    "phone": "7768884213",
+    "priority_phone": true,
+    "fcm_token": null,
+    "exact_address": "Shivgaon, Main Street",
+    "family_members": [{"name": "Piyush Patil", "relation": "Friend", "gender": "Unknown", "age": null}]
+  },
+  {
+    "user_id": "U056",
+    "name": "Piyush Patil",
+    "village_id": "V002",
+    "phone": "7020192835",
+    "priority_phone": true,
+    "fcm_token": null,
+    "exact_address": "Shivgaon, Main Street",
+    "family_members": [{"name": "Debajeet Mandal", "relation": "Friend", "gender": "Unknown", "age": null}]
+  }
 ]
